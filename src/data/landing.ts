@@ -1,6 +1,7 @@
 /**
  * Warm (gold) assets: `/public/images/`.
- * Purple theme: `/public/images/purple/` (often same base names; hero/detox may use custom names).
+ * Purple theme: `/public/images/purple/` — filenames match what is in that folder.
+ * If a purple file is missing, `imagePurple` can match `imageWarm` until you add one.
  */
 export const heroImages = {
   warm: "/images/landertopImage.webp",
@@ -10,9 +11,7 @@ export const heroImages = {
 export type ShowcaseCategory = {
   title: string;
   alt: string;
-  /** Default / gold theme image */
   imageWarm: string;
-  /** Purple theme image (same filename under `/images/purple/`) */
   imagePurple: string;
 };
 
@@ -20,31 +19,32 @@ export const showcaseCategories: ShowcaseCategory[] = [
   {
     title: "Latest Disposable Vapes",
     imageWarm: "/images/vapesCat.webp",
-    imagePurple: "/images/purple/vapesCat.webp",
+    // No purple asset in repo yet — uses warm image in purple theme too
+    imagePurple: "/images/vapesCat.webp",
     alt: "Disposable vapes at Cottonwoods Smoke Shop",
   },
   {
     title: "Vape Mods & Kits",
     imageWarm: "/images/modvape.webp",
-    imagePurple: "/images/purple/modvape.webp",
+    imagePurple: "/images/purple/modvabePurple.png",
     alt: "Vape mods and kits at Cottonwoods Smoke Shop",
   },
   {
     title: "Vape Tanks, Coils & Pods",
     imageWarm: "/images/VapeTanksCoilsPods.webp",
-    imagePurple: "/images/purple/VapeTanksCoilsPods.webp",
+    imagePurple: "/images/purple/VapeTanksCoilsPodsPurple.png",
     alt: "Vape tanks, coils, and pods at Cottonwoods Smoke Shop",
   },
   {
     title: "E-Juices & Salt-Nics",
     imageWarm: "/images/EJuicesSaltNics.webp",
-    imagePurple: "/images/purple/EJuicesSaltNics.webp",
+    imagePurple: "/images/purple/EJuicesSaltNicsPurple.png",
     alt: "E-juices and salt nicotine at Cottonwoods Smoke Shop",
   },
   {
     title: "Incenses & Sages",
     imageWarm: "/images/IncensesSages.webp",
-    imagePurple: "/images/purple/IncensesSages.webp",
+    imagePurple: "/images/purple/IncensesSagespurple.png",
     alt: "Incense and sage at Cottonwoods Smoke Shop",
   },
   {
@@ -71,12 +71,34 @@ export type BrandSlide = {
 };
 
 export const brandSlides: readonly BrandSlide[] = [
-  { label: "GeekVape", imageWarm: "https://placehold.co/360x160/1a1511/e3a04d?text=GeekVape", imagePurple: "https://placehold.co/360x160/120a18/c4b5fd?text=GeekVape" },
-  { label: "SMOK", imageWarm: "https://placehold.co/360x160/1a1511/e3a04d?text=SMOK", imagePurple: "https://placehold.co/360x160/120a18/c4b5fd?text=SMOK" },
-  { label: "Vapetasia", imageWarm: "https://placehold.co/360x160/1a1511/e3a04d?text=Vapetasia", imagePurple: "https://placehold.co/360x160/120a18/c4b5fd?text=Vapetasia" },
-  { label: "Hyde", imageWarm: "https://placehold.co/360x160/1a1511/e3a04d?text=Hyde", imagePurple: "https://placehold.co/360x160/120a18/c4b5fd?text=Hyde" },
-  { label: "Elf Bar", imageWarm: "https://placehold.co/360x160/1a1511/e3a04d?text=Elf+Bar", imagePurple: "https://placehold.co/360x160/120a18/c4b5fd?text=Elf+Bar" },
-  { label: "Lookah", imageWarm: "https://placehold.co/360x160/1a1511/e3a04d?text=Lookah", imagePurple: "https://placehold.co/360x160/120a18/c4b5fd?text=Lookah" },
-  { label: "Candy King", imageWarm: "https://placehold.co/360x160/1a1511/e3a04d?text=Candy+King", imagePurple: "https://placehold.co/360x160/120a18/c4b5fd?text=Candy+King" },
-  { label: "Your brand", imageWarm: "https://placehold.co/360x160/1a1511/e3a04d?text=Your+Logo", imagePurple: "https://placehold.co/360x160/120a18/c4b5fd?text=Your+Logo" },
+  {
+    label: "GeekVape",
+    imageWarm: "/images/logos/geekvapelogo.png",
+    imagePurple: "/images/purple/logos/geekvapepurple.png",
+  },
+  {
+    label: "SMOK",
+    imageWarm: "/images/logos/smoke.png",
+    imagePurple: "/images/purple/logos/smokepurple.png",
+  },
+  {
+    label: "Yucan",
+    imageWarm: "/images/logos/yucan.png",
+    imagePurple: "/images/purple/logos/yucanpurple.png",
+  },
+  {
+    label: "Hemper",
+    imageWarm: "/images/logos/hemper.png",
+    imagePurple: "/images/purple/logos/hemperpurple.png",
+  },
+  {
+    label: "GRAV",
+    imageWarm: "/images/logos/grav.png",
+    imagePurple: "/images/purple/logos/gravpurple.png",
+  },
+  {
+    label: "Lookah",
+    imageWarm: "/images/logos/lookah.png",
+    imagePurple: "/images/purple/logos/lookahpurple.png",
+  },
 ];

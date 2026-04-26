@@ -48,13 +48,6 @@ export function BrandSlider() {
           <h2 className="section__title" style={{ margin: 0 }}>
             Popular brands we carry
           </h2>
-          <p className="section__lede" style={{ marginTop: "0.5rem" }}>
-            Swap these placeholders for your real distributor logos in{" "}
-            <code className="muted" style={{ fontSize: "0.85em" }}>
-              src/data/landing.ts
-            </code>{" "}
-            or drop PNGs into <code className="muted" style={{ fontSize: "0.85em" }}>/public/brands/</code>.
-          </p>
         </div>
         <div className="brand-slider__controls">
           <button
@@ -86,12 +79,11 @@ export function BrandSlider() {
             <figure key={b.label} className="brand-slide">
               <img
                 src={themeAsset(theme, b.imageWarm, b.imagePurple)}
-                alt=""
+                alt={b.label}
                 loading="lazy"
                 width={360}
                 height={160}
               />
-              <figcaption>{b.label}</figcaption>
             </figure>
           ))}
         </div>

@@ -25,12 +25,15 @@ export function Layout() {
             <span className="brand__title">{SITE.name}</span>
             <span className="brand__tag">Vape · Glass · Smoke</span>
           </NavLink>
-          <nav className="nav" aria-label="Primary">
+          <span className="site-header__spacer" aria-hidden="true" />
+          <div className="site-header__actions">
+            <nav className="nav" aria-label="Primary">
+              <NavItem to="/">Home</NavItem>
+              <NavItem to="/contact">Contact</NavItem>
+              <NavItem to="/apply">Apply</NavItem>
+            </nav>
             <ThemeToggle />
-            <NavItem to="/">Home</NavItem>
-            <NavItem to="/contact">Contact</NavItem>
-            <NavItem to="/apply">Apply</NavItem>
-          </nav>
+          </div>
         </div>
       </header>
 
